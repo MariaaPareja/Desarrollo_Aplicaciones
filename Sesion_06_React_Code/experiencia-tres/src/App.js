@@ -10,23 +10,26 @@ import Boton from './UseState/Boton';
 import Efecto from './UseEffect/Efecto';
 
 function App() {
+  const productos = [
+    { nombre: 'Camiseta', descripcion: 'Camiseta de algodón 100%', precio: 20 },
+    { nombre: 'Pantalón', descripcion: 'Pantalón de mezclilla ajustado', precio: 40 },
+    { nombre: 'Zapatos', descripcion: 'Zapatos deportivos ligeros', precio: 60 },
+    { nombre: 'Chaqueta', descripcion: 'Chaqueta impermeable con capucha', precio: 80 },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header title="Mi Aplicación de Tienda" />
+        <nav style={navStyles}>
+          <Link to="/" style={linkStyles}>Inicio</Link>
+          <Link to="/productos" style={linkStyles}>Productos</Link>
+          <Link to="/toggle" style={linkStyles}>Toggle</Link>
+          <Link to="/boton" style={linkStyles}>Botón</Link>
+          <Link to="/efecto" style={linkStyles}>Efecto</Link>
+        </nav>
+      </div>
+    </Router>
   );
 }
 
