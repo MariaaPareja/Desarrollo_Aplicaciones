@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 function DataList({ data }) {
@@ -22,10 +21,11 @@ function DataList({ data }) {
             >
               Añadir al carrito
             </button>
-          </li>
+          </li>	
         ))}
       </ul>
     </div>
   );
 }
 export default DataList;
+
