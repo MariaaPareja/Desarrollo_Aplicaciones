@@ -6,7 +6,7 @@ const pizzas = [
   // Otras pizzas...
 ];
 
-const PizzaMenu = ({ onPizzaSelect, onToppingToggle }) => {
+const PizzaMenu = ({ onPizzaSelect}) => {
   return (
     <div>
       <h2>Menú de Pizzas</h2>
@@ -14,7 +14,6 @@ const PizzaMenu = ({ onPizzaSelect, onToppingToggle }) => {
         <div key={pizza.id}>
           <h3>{pizza.name} - ${pizza.basePrice}</h3>
           <button onClick={() => onPizzaSelect(pizza)}>Seleccionar</button>
-          {/* Agrega ingredientes como champiñones, cebolla, etc. */}
         </div>
       ))}
     </div>
