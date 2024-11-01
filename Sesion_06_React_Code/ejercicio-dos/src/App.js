@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Inicio from "./components/Inicio/Inicio";
+import SobreTienda from "./components/SobreTienda/SobreTienda";
+import ListaProductos from "./components/ListaProductos/ListaProductos";
+import DetalleProducto from "./components/DetalleProducto/DetalleProducto";
+import RutaPrivada from "./components/RutaPrivada/RutaPrivada";
+ 
+const isAuthenticated = false; // Cambia a true para acceder a las rutas protegidas
+ 
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <Link to="/">Inicio</Link>
+        <Link to="/about">Sobre la Tienda</Link>
+        <Link to="/productos">Productos</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/about" element={<SobreTienda />} />
+        <Route
+          path="/productos"
+          element={
+            <RutaPrivada isAuthenticated={isAuthenticated}>
+              <ListaProductos />
+            </RutaPrivada>
+          }
+        />
+        <Route path="/productos/:productId" element={<DetalleProducto />} />
+      </Routes>
+    </Router>
   );
-}
-
+};
+ 
 export default App;
