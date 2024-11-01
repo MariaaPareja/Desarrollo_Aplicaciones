@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Profile from './Profile';
 import Boton from './Boton';
 import Home from './Home';
 import About from './About';
@@ -31,6 +32,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/boton" component={Boton} />
+        <Route path="/profile" component={Profile} /> 
       </Switch>
     </Router>
   );
