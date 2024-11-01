@@ -1,0 +1,25 @@
+
+.toggle-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .toggle-button {
+    background-color: #4caf96;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-button:hover {
+    background-color: #4586a0;
+  }
+  
+  .toggle-button-container p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
