@@ -29,4 +29,4 @@ class EstadoTareas(rx.State):
 
 
 app = rx.App() 
-app.add_page(index)
+app.add_page(EstadoTareas.index)
