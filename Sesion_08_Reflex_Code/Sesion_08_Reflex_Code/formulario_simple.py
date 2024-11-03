@@ -1,4 +1,4 @@
-import reflex as rx 
+import reflex as rx  # type: ignore
 from rxconfig import config
 
 class EstadoFormulario(rx.State): 
