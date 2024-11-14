@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Salud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            background-color: #e8f5e9;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .section-title {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .products, .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+        }
+        .product, .service {
+            background-color: white;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Farmacia Salud</h1>
+    <p>Tu salud es nuestra prioridad</p>
+</header>
+
+<nav>
+    <a href="#productos">Productos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container">
+    <section id="productos">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Paracetamol</h3>
+                <p>Medicamento para reducir el dolor y la fiebre.</p>
+                <p><strong>Precio: $1.50</strong></p>
+            </div>
+            <div class="product">
+                <h3>Ibuprofeno</h3>
+                <p>Antiinflamatorio y analgésico para el dolor.</p>
+                <p><strong>Precio: $2.00</strong></p>
+            </div>
+            <div class="product">
+                <h3>Vitamina C</h3>
+                <p>Suplemento para fortalecer el sistema inmunológico.</p>
+                <p><strong>Precio: $0.80</strong></p>
+            </div>
+            <div class="product">
+                <h3>Antihistamínico</h3>
+                <p>Alivio de síntomas de alergias.</p>
+                <p><strong>Precio: $3.00</strong></p>
+            </div>
+        </div>
+    </section>
+    <section id="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Consulta Médica</h3>
+                <p>Consulta con médicos especializados para tu bienestar.</p>
+            </div>
+            <div class="service">
+                <h3>Entrega a Domicilio</h3>
+                <p>Recibe tus medicamentos sin salir de casa.</p>
+            </div>
+            <div class="service">
+                <h3>Consejería Farmacéutica</h3>
+                <p>Asesoría personalizada sobre medicamentos y cuidados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2 class="section-title">Contáctanos</h2>
+        <p><strong>Dirección:</strong> Avenida Ejemplo 123, Arequipa, Perú</p>
+        <p><strong>Teléfono:</strong> +51 966 899 184</p>
+        <p><strong>Email:</strong> contacto@miafarmacia.com</p>
+        <p>¡No dudes en ponerte en contacto!</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
