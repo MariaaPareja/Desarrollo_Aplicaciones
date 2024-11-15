@@ -35,3 +35,13 @@ app.get('/books', function(req,res) {
         res.end(JSON.stringify(results))
     });
 });
+
+//API para extraer los libros por ID
+app.get('/books/:id', function(req,res){
+    connection.query('select * from books where id=?', [req.params.id],
+        function(error, results){
+            if(error) throw error;
+            res.end(JSON.stringify(results))
+        }
+    );
+});
